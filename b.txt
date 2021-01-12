@@ -1,0 +1,100 @@
+我叫陈昊
+来自大数据3班
+这是我的git笔记：
+ 一、本地基本配置
+   	git 
+
+   	1.版本查看和校验
+   	git version
+
+   	2.基本信息查看
+   	    git config -l
+
+   	3.基本信息配置
+   	    git config --global user.name ""
+   	    git config --global user.email ""
+
+   二、本地仓库操作
+   	//创建一个姓名文件夹、一个姓名.txt文件 提交，并git log 查看版本
+   	截图发到qq群！
+   	1.dos命令
+   	cd 进入文件夹
+   	mkdir 文件夹名 创建文件夹
+   	touch 文件名
+   	cd .. 返回上一文件夹
+
+   	    2.初始化本地仓库（形成工作区）
+   	    	git init
+
+   	    3.工作区 - 版本库
+   	       git status 
+   	           红色：工作区
+   	           绿色：暂存区
+   	           没有颜色： 版本库
+   	       工作区 - 暂存区
+   	        git add .    . = all
+   	        git add 文件名
+   	       暂存区 - 版本库
+   	        git commit -m "描述"
+
+   	    4.git删除和修改文件
+
+   	        删除文件：
+   	           工作区删除
+   	              rm 文件名
+   	           暂存区
+   	              git rm 文件名
+   	           版本库
+   	              git commit -m "提交一个新的版本"
+
+  	修改文件名
+  	   工作区
+  	      修改文件名
+  	      mv 旧文件名 新文件名
+ 	   暂存区 
+ 	      git rm 旧文件
+ 	      git add 新文件    git mv 旧文件名 新文件名
+ 	   版本库
+ 	      git commit -m "xxx"
+
+ 	    5.查看版本和状态
+
+ 	        git status 
+ 	        git diff
+ 	        git log  --oneline -n数量
+
+
+ 	    6.状态改变
+
+ 	    	场景一：修改了工作区，但是发现代码出现问题了！
+
+ 	    	 git checkout 文件名
+
+ 	    	 将版本库的对应文件的最新版本，覆盖工作区对应文件！
+
+ 	    	 文件一定被提交过！！
+
+ 	    	场景二:错误文件提交到了暂存区！怎么处理！
+ 
+ 	    	  危险命令： git reset --hard 
+
+ 	    	  步骤1：暂存区状态去掉
+ 	    	  	 git reset head 文件名
+
+ 	    	  步骤2：工作区覆盖
+ 	    	  	 git checkout 文件名
+
+ 	    	场景三：提交到版本库或者远程仓库
+
+ 	    	   减量更新：版本回滚(不推荐)
+
+ 	    	   	   git reset --hard
+
+ 	    	   	   git reset --hard 版本号
+
+ 	    	   	   问题：会去掉别人的代码！
+
+ 	    	   增量更新：
+
+ 	    	   	   修改错误代码！再次提交！
+以后再与你们分享。哈哈哈。。。
